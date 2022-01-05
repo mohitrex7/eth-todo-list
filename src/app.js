@@ -80,7 +80,8 @@ App = {
       App.setLoading(true);
       const content = $('#newTask').val();
       await App.todoList.createTask(content, {from: App.account });
-      window.location.reload();
+      setTimeout(() => { window.location.reload(); }, 20000);
+      
     },
   
     toggleCompleted: async (e) => {
